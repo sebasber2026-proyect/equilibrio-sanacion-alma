@@ -2,95 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark mystical theme */
+    --background: 20 15% 5%;
+    --foreground: 40 30% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 20 20% 8%;
+    --card-foreground: 40 30% 90%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 20 20% 8%;
+    --popover-foreground: 40 30% 90%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Warm amber/gold - candle glow */
+    --primary: 38 90% 55%;
+    --primary-foreground: 20 15% 5%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Deep burgundy */
+    --secondary: 350 40% 20%;
+    --secondary-foreground: 40 30% 90%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 20 15% 15%;
+    --muted-foreground: 40 20% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Subtle mystical purple */
+    --accent: 280 30% 25%;
+    --accent-foreground: 40 30% 90%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 38 30% 20%;
+    --input: 20 20% 15%;
+    --ring: 38 90% 55%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom colors */
+    --candle-glow: 38 100% 60%;
+    --candle-flame: 30 100% 50%;
+    --warm-cream: 40 40% 92%;
+    --deep-wine: 350 50% 25%;
+    --mystic-purple: 280 40% 30%;
+    --golden-shimmer: 45 100% 65%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Gradients */
+    --gradient-mystical: linear-gradient(135deg, hsl(20 15% 5%) 0%, hsl(280 30% 10%) 50%, hsl(20 15% 5%) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(38 90% 55% / 0.3) 0%, transparent 70%);
+    --gradient-card: linear-gradient(180deg, hsl(20 20% 10%) 0%, hsl(20 15% 6%) 100%);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Shadows */
+    --shadow-glow: 0 0 30px hsl(38 90% 55% / 0.3);
+    --shadow-soft: 0 4px 20px hsl(0 0% 0% / 0.5);
+    --shadow-candle: 0 0 60px hsl(38 100% 60% / 0.4);
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 20 15% 8%;
+    --sidebar-foreground: 40 30% 90%;
+    --sidebar-primary: 38 90% 55%;
+    --sidebar-primary-foreground: 20 15% 5%;
+    --sidebar-accent: 280 30% 25%;
+    --sidebar-accent-foreground: 40 30% 90%;
+    --sidebar-border: 38 30% 20%;
+    --sidebar-ring: 38 90% 55%;
   }
 }
 
@@ -101,5 +76,155 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Cormorant Garamond', serif;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+@layer components {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(38 90% 55%) 0%, hsl(45 100% 65%) 50%, hsl(38 90% 55%) 100%);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 20px hsl(38 90% 55% / 0.5), 0 0 40px hsl(38 90% 55% / 0.3);
+  }
+
+  .card-mystical {
+    @apply bg-card border border-border rounded-lg;
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .card-mystical:hover {
+    box-shadow: var(--shadow-glow);
+    border-color: hsl(38 90% 55% / 0.5);
+  }
+
+  .btn-whatsapp {
+    @apply bg-[#25D366] text-white font-medium px-6 py-3 rounded-full transition-all duration-300;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .btn-whatsapp:hover {
+    @apply scale-105;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+  }
+
+  .candle-container {
+    position: relative;
+  }
+
+  .candle-flame {
+    position: absolute;
+    width: 12px;
+    height: 30px;
+    background: linear-gradient(to top, hsl(30 100% 50%), hsl(45 100% 60%), hsl(50 100% 80%));
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: flicker 0.5s ease-in-out infinite alternate;
+    filter: blur(1px);
+    box-shadow: 0 0 20px hsl(38 100% 60% / 0.8), 0 0 40px hsl(38 100% 60% / 0.5);
+  }
+
+  .candle-glow {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, hsl(38 100% 60% / 0.4) 0%, transparent 70%);
+    animation: glow-pulse 2s ease-in-out infinite;
+    border-radius: 50%;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+}
+
+@keyframes flicker {
+  0%, 100% {
+    transform: scaleY(1) scaleX(1) translateY(0);
+    opacity: 1;
+  }
+  25% {
+    transform: scaleY(1.1) scaleX(0.9) translateY(-2px);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scaleY(0.95) scaleX(1.05) translateY(1px);
+    opacity: 1;
+  }
+  75% {
+    transform: scaleY(1.05) scaleX(0.95) translateY(-1px);
+    opacity: 0.95;
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    hsl(38 90% 55%) 0%,
+    hsl(45 100% 75%) 25%,
+    hsl(38 90% 55%) 50%,
+    hsl(45 100% 75%) 75%,
+    hsl(38 90% 55%) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
 }
