@@ -9,7 +9,6 @@ const services = [
     icon: Moon,
     title: "Lectura del Tarot",
     description: "Descubre los mensajes del universo a través de las cartas. Orientación clara para tomar decisiones importantes en amor, trabajo y vida personal.",
-    price: "Desde $80.000 COP",
     whatsappMessage: "Hola, me interesa una lectura de Tarot. ¿Podrías darme más información?",
     image: tarotImg,
   },
@@ -17,7 +16,6 @@ const services = [
     icon: Flame,
     title: "Limpieza Energética",
     description: "Libera las energías negativas que bloquean tu camino. Rituales de purificación para tu hogar, negocio o ser interior.",
-    price: "Desde $120.000 COP",
     whatsappMessage: "Hola, necesito información sobre limpiezas energéticas. ¿Cómo funciona?",
     image: limpiezaImg,
   },
@@ -25,7 +23,6 @@ const services = [
     icon: Heart,
     title: "Amarres y Endulzamientos",
     description: "Rituales ancestrales para fortalecer vínculos amorosos, recuperar relaciones y atraer el amor verdadero a tu vida.",
-    price: "Desde $150.000 COP",
     whatsappMessage: "Hola, me gustaría saber más sobre los rituales de amor. ¿Podemos hablar?",
     image: amarresImg,
   },
@@ -33,7 +30,6 @@ const services = [
     icon: Star,
     title: "Protección Espiritual",
     description: "Escudos energéticos personalizados para protegerte de envidias, malas intenciones y energías negativas.",
-    price: "Desde $100.000 COP",
     whatsappMessage: "Hola, necesito protección espiritual. ¿Qué opciones tienen disponibles?",
     image: proteccionImg,
   },
@@ -98,19 +94,16 @@ const Services = () => {
                     {service.description}
                   </p>
 
-                  {/* Price & CTA */}
-                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <span className="font-cinzel text-primary text-lg">
-                      {service.price}
-                    </span>
+                  {/* CTA */}
+                  <div className="flex justify-center sm:justify-start">
                     <a
                       href={whatsappUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 btn-whatsapp text-sm px-5 py-2"
+                      className="inline-flex items-center gap-2 btn-whatsapp text-sm px-6 py-3"
                     >
                       <MessageCircle className="w-4 h-4" />
-                      Consultar
+                      Consultar Ahora
                     </a>
                   </div>
                 </div>
