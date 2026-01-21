@@ -1,4 +1,5 @@
 import { MessageCircle, Sparkles } from 'lucide-react';
+import heroBackground from '@/assets/hero-altar-bg.jpg';
 
 const Hero = () => {
   const whatsappNumber = "573043295611";
@@ -7,6 +8,20 @@ const Hero = () => {
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center pt-20">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: `url(${heroBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background/90" />
+      </div>
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Decorative element */}
@@ -64,7 +79,7 @@ const Hero = () => {
               className="inline-flex items-center gap-3 btn-whatsapp text-lg px-8 py-4"
             >
               <MessageCircle className="w-6 h-6" />
-              Agenda tu Consulta Gratis
+              Consulta Gratis
             </a>
           </div>
 

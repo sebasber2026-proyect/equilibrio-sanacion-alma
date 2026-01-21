@@ -1,41 +1,61 @@
-import { Star, Quote, MapPin } from 'lucide-react';
+import { Star, Quote, Globe } from 'lucide-react';
 
 const testimonials = [
   {
     name: "María Fernanda",
-    location: "Chapinero, Bogotá",
+    country: "Colombia",
+    flag: "🇨🇴",
     text: "Después de la limpieza energética, mi vida cambió completamente. Mi negocio comenzó a prosperar y las energías negativas desaparecieron. Eternamente agradecida.",
     rating: 5,
     service: "Limpieza Energética",
   },
   {
-    name: "Carlos Alberto",
-    location: "Usaquén, Bogotá",
+    name: "Carlos Andrés",
+    country: "México",
+    flag: "🇲🇽",
     text: "La lectura del tarot fue increíblemente precisa. Me ayudó a tomar decisiones importantes en mi carrera. Su don es real y su energía es muy positiva.",
     rating: 5,
     service: "Lectura del Tarot",
   },
   {
-    name: "Sandra Patricia",
-    location: "Suba, Bogotá",
+    name: "Sandra Milena",
+    country: "España",
+    flag: "🇪🇸",
     text: "Gracias al ritual de amor, mi esposo y yo pudimos superar una crisis muy difícil. Ahora estamos más unidos que nunca. Un trabajo espiritual muy poderoso.",
     rating: 5,
     service: "Amarres y Endulzamientos",
   },
   {
-    name: "Jorge Luis",
-    location: "Kennedy, Bogotá",
+    name: "Roberto García",
+    country: "Estados Unidos",
+    flag: "🇺🇸",
     text: "La protección espiritual me dio la paz que necesitaba. Sentía mucha envidia a mi alrededor y ahora me siento blindado. Muy profesional y discreta.",
     rating: 5,
     service: "Protección Espiritual",
+  },
+  {
+    name: "Ana Lucía",
+    country: "Argentina",
+    flag: "🇦🇷",
+    text: "Increíble la precisión de su trabajo. A la distancia logró ayudarme con problemas que venía arrastrando hace años. Su energía trasciende fronteras.",
+    rating: 5,
+    service: "Sanación Energética",
+  },
+  {
+    name: "Miguel Ángel",
+    country: "Perú",
+    flag: "🇵🇪",
+    text: "Tenía bloqueos en mi negocio y después del ritual de prosperidad todo comenzó a fluir. Clientes nuevos llegaron y las deudas se saldaron. Gracias infinitas.",
+    rating: 5,
+    service: "Ritual de Prosperidad",
   },
 ];
 
 const stats = [
   { value: "98%", label: "Clientes Satisfechos" },
-  { value: "2,500+", label: "Consultas Realizadas" },
+  { value: "5,000+", label: "Consultas Realizadas" },
   { value: "15", label: "Años de Experiencia" },
-  { value: "100%", label: "Confidencial" },
+  { value: "25+", label: "Países Atendidos" },
 ];
 
 const Testimonials = () => {
@@ -52,13 +72,13 @@ const Testimonials = () => {
             <span className="text-gradient-gold">Transformación</span>
           </h2>
           <p className="font-cormorant text-xl text-muted-foreground max-w-2xl mx-auto">
-            Historias reales de personas en Bogotá que encontraron su camino hacia la luz
+            Historias reales de personas alrededor del mundo que encontraron su camino hacia la luz
           </p>
         </div>
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto">
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <div 
               key={stat.label}
               className="card-mystical p-6 text-center"
@@ -74,8 +94,8 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonials grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {testimonials.map((testimonial, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {testimonials.map((testimonial) => (
             <div
               key={testimonial.name}
               className="card-mystical p-8 relative"
@@ -101,9 +121,9 @@ const Testimonials = () => {
                   <p className="font-cinzel text-foreground">
                     {testimonial.name}
                   </p>
-                  <div className="flex items-center gap-1 text-muted-foreground">
-                    <MapPin className="w-3 h-3" />
-                    <span className="font-cormorant text-sm">{testimonial.location}</span>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <span className="text-xl">{testimonial.flag}</span>
+                    <span className="font-cormorant text-sm">{testimonial.country}</span>
                   </div>
                 </div>
                 <span className="font-cormorant text-xs text-primary bg-primary/10 px-3 py-1 rounded-full">
@@ -114,12 +134,12 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* Location badge */}
+        {/* Global service badge */}
         <div className="text-center mt-12">
           <div className="inline-flex items-center gap-2 bg-card border border-border rounded-full px-6 py-3">
-            <MapPin className="w-5 h-5 text-primary" />
+            <Globe className="w-5 h-5 text-primary" />
             <span className="font-cormorant text-lg text-foreground">
-              Atendemos en toda <span className="text-primary">Bogotá, Colombia</span>
+              Atendemos clientes en <span className="text-primary">todo el mundo</span> - Consultas virtuales disponibles
             </span>
           </div>
         </div>
