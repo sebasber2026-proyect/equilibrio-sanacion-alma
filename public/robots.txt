@@ -17,4 +17,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://equilibrio-sanacion.lovable.app/sitemap.xml
+Sitemap: https://equilibrio-sanacion-alma.vercel.app/sitemap.xml
