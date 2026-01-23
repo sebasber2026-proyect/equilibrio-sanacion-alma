@@ -1,4 +1,5 @@
 import { MessageCircle, Phone, MapPin, Heart } from 'lucide-react';
+import VisitCounter from './VisitCounter';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -126,6 +127,9 @@ const Footer = () => {
             </p>
           </div>
         </div>
+
+        {/* Visit Counter */}
+        <VisitCounter />
       </div>
     </footer>
   );
