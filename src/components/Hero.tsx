@@ -2,7 +2,7 @@ import { MessageCircle, Sparkles } from 'lucide-react';
 import heroBackground from '@/assets/hero-altar-bg.jpg';
 
 const Hero = () => {
-  const whatsappNumber = "573043295611";
+  const whatsappNumber = "573223281876";
   const whatsappMessage = encodeURIComponent("Hola, me gustaría recibir información sobre sus servicios de sanación espiritual.");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
