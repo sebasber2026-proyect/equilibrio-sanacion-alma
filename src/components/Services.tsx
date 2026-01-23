@@ -36,7 +36,7 @@ const services = [
 ];
 
 const Services = () => {
-  const whatsappNumber = "573043295611";
+  const whatsappNumber = "573223281876";
 
   return (
     <section id="servicios" className="relative py-24">
