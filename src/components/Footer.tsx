@@ -3,8 +3,8 @@ import VisitCounter from './VisitCounter';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const phoneNumber = "3043295611";
-  const whatsappNumber = "573043295611";
+  const phoneNumber = "3223281876";
+  const whatsappNumber = "573223281876";
 
   const quickLinks = [
     { href: "#inicio", label: "Inicio" },
