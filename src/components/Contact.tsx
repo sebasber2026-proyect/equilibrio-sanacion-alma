@@ -1,8 +1,8 @@
 import { MessageCircle, Phone, Clock, MapPin, Mail } from 'lucide-react';
 
 const Contact = () => {
-  const phoneNumber = "3043295611";
-  const whatsappNumber = "573043295611";
+  const phoneNumber = "3223281876";
+  const whatsappNumber = "573223281876";
   const whatsappMessage = encodeURIComponent("Hola, me gustaría agendar una consulta. ¿Cuál es su disponibilidad?");
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
