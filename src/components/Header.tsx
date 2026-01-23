@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const phoneNumber = "3043295611";
+  const phoneNumber = "3223281876";
 
   const navLinks = [
     { href: "#inicio", label: "Inicio" },
