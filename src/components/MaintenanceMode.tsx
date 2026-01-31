@@ -39,7 +39,7 @@ const MaintenanceMode = ({ children }: MaintenanceModeProps) => {
     );
   }
 
-  if (maintenance?.activo) {
+  if (!maintenance?.activo) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/10 flex items-center justify-center p-4">
         <div className="text-center max-w-lg">
